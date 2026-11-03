@@ -25,7 +25,7 @@ GUI 负责选择实例、启动服务和打开 WebUI；模型配置、首次密�
 
 ## 下载后核对
 
-Release 附带 `SHA256SUMS` 和 `release-manifest.json`。下载全部清单文件后，在同一目录执行：
+Release 附带 `SHA256SUMS` 和 `release-manifest.json`。下载清单列出的全部文件后，在同一目录执行：
 
 ```sh
 # macOS
