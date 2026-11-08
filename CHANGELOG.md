@@ -1,3 +1,13 @@
+# Shining Buddy Release Notes
+
+## v0.9.7-rc.1
+
+修复定时任务浏览器配置误判，保留私有运行目录及真实变更保护。详见 [Release Notes](releases/v0.9.7-rc.1.md)。
+
+## v0.9.6
+
+零模型版本检测、存量实例自动启用、签名下载与确认后升级，详见 [Release Notes](releases/v0.9.6.md)。
+
 # 发行记录
 
 安装包、发行说明与验证状态以 [GitHub Releases](https://github.com/leanowtech/ShiningBuddy/releases) 为准。
