@@ -12,6 +12,20 @@
 
 ## macOS / Linux CLI
 
+自 v0.9.9-rc.7 起，可将发行附件 `stop.sh` 和 `start.sh` 放在安装目录根部，与 `bin/` 和 `instance/` 同级。脚本需要 Python 3。默认先找 `bin/shining-buddy`，也支持安装目录根部的 `shining-buddy`。脚本所在位置决定默认路径，执行时可以在任意目录。
+
+```sh
+sh /安装目录/stop.sh
+# 确认已停止，备份原程序与实例，然后替换 CLI。
+sh /安装目录/start.sh
+```
+
+非默认布局用 `--cli` 和 `--data-dir` 指定。停服默认等在途任务完成，明确需要取消时使用 `stop.sh --cancel-active`。启停脚本适用于手动管理的实例。已启用 Shining Buddy 内置自启动的实例继续使用 `service` 命令管理。
+
+已有自定义 macOS LaunchAgent 保活时，可为**两份脚本**同时传入 `--keepalive-plist` 和 `--keepalive-state`，也可设置 `SB_KEEPALIVE_PLIST` 和 `SB_KEEPALIVE_STATE`。保活程序需要遵守状态目录中的 `off` 标记。脚本读取 plist 的实际 Label，停服前暂停，确认新版本的管理服务可用后恢复。普通手动实例无需设置保活。
+
+也可使用以下 CLI 命令自行启停。
+
 把变量设为当前旧程序与原数据目录。以下命令不会自动取消未完成任务：
 
 ```sh

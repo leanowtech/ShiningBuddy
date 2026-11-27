@@ -1,3 +1,8 @@
+## v0.9.9-rc.7
+
+- macOS 和 Linux CLI 发行附带可移植的启停脚本。
+- 升级 DeepSeek Harness，验证旧会话续跑、工具审批和 Shell 回收。详见 [发行说明](releases/v0.9.9-rc.7.md)。
+
 ## v0.9.9-rc.6
 
 - 微信网页登录审批显示请求 IP 和浏览器 UA。
